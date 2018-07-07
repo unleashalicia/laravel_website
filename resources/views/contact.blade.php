@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Contact</h1>
-    {!! Form::open(['url' => 'contact/sumbit']) !!}
+    {!! Form::open(['url' => 'contact/submit']) !!}
         <div class="form-group">
             {{Form::label('name', 'Name')}}
             {{Form::text('name', '', ['placeholder' => 'Enter Name', 'class' => 'form-control'])}}
@@ -14,6 +14,9 @@
         <div class="form-group">
             {{Form::label('message', 'Message')}}
             {{Form::textarea('message', '', ['placeholder' => 'Enter Message', 'class' => 'form-control'])}}
+        </div>
+        <div>
+            {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
         </div>
     {!! Form::close() !!}
 @endsection
